@@ -1,8 +1,8 @@
 import toroweldingLogo from '../assets/toroweldingLogo.png';
 import NeoIVLogo from '../assets/NeoIVLogo.png';
 import instagramLogo from '../assets/instagram.png';
-import facebookLogo from '../assets/facebook.png'; // Added Facebook import
-import { Phone, Mail, MapPin } from 'lucide-react';
+import facebookLogo from '../assets/facebook.png';
+import { Phone, Mail, MapPin, User } from 'lucide-react'; 
 
 export const Footer = () => {
   return (
@@ -16,16 +16,25 @@ export const Footer = () => {
           </p>
         </div>
         
+        {/* Updated Contact Info Section */}
         <div className="space-y-4">
           <h4 className="text-industrial-orange font-black uppercase tracking-widest text-sm">Contact Info</h4>
+          
+          <div className="flex items-center justify-center md:justify-start gap-3 text-white border-b border-white/5 pb-2">
+            <User className="text-industrial-orange" size={20} />
+            <span className="font-bold tracking-wide">Owner: Gabino Torres Jr.</span>
+          </div>
+
           <div className="flex items-center justify-center md:justify-start gap-3">
             <Phone className="text-industrial-orange" size={20} />
             <span className="text-xl font-bold">(361) 222-1930</span>
           </div>
+          
           <div className="flex items-center justify-center md:justify-start gap-3">
             <Mail className="text-industrial-orange" size={20} />
             <span className="text-gray-300">torowelding@yahoo.com</span>
           </div>
+          
           <div className="flex items-center justify-center md:justify-start gap-3 text-gray-300">
             <MapPin className="text-industrial-orange" size={20} />
             <span>Ingleside, TX</span>
@@ -47,7 +56,6 @@ export const Footer = () => {
                 className="h-6 w-6 object-contain transition-all brightness(0) invert(1) group-hover:brightness(100%) group-hover:invert(0)" 
               />
             </a>
-            {/* Added Facebook Link right next to Instagram */}
             <a 
               href="https://www.facebook.com/profile.php?id=61560516488673" 
               target="_blank" 
