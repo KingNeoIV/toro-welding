@@ -2,8 +2,9 @@ import work1 from '../assets/work1.png';
 import toroweldingLogo from '../assets/toroweldingLogo.png';
 
 export const Hero = () => (
-  <section className="relative h-[90dvh] flex items-center justify-center overflow-hidden bg-black">
-    <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/20 to-industrial-dark z-10" />
+  /* Changed h-[90dvh] to h-[90svh] to prevent the scroll 'jump' */
+  <section className="relative h-[90svh] flex items-center justify-center overflow-hidden bg-black">
+    <div className="absolute inset-0 bg-linear-to-b from-black/90 via-black/20 to-industrial-dark z-10" />
     
     <img 
       src={work1} 
@@ -11,10 +12,8 @@ export const Hero = () => (
       alt="Industrial Welding" 
     />
 
-    {/* Added 'landscape:py-4' and 'landscape:justify-start' to help with scrolling if needed */}
     <div className="relative z-20 text-center px-6 max-w-5xl w-full h-full flex flex-col justify-center items-center landscape:py-4">
       
-      {/* Shrink the logo significantly in landscape mode */}
       <div className="flex justify-center mb-4 md:mb-10 landscape:mb-2">
         <img 
           src={toroweldingLogo} 
@@ -32,13 +31,11 @@ export const Hero = () => (
         <span className="text-industrial-orange">Precision</span>
       </h1>
 
-      {/* Hide the paragraph in mobile landscape to save space for buttons */}
       <p className="mt-4 md:mt-8 text-sm md:text-xl text-gray-300 font-medium max-w-2xl mx-auto leading-relaxed border-l-4 border-industrial-orange pl-6 md:pl-0 md:border-0 text-left md:text-center landscape:hidden">
         Locally owned and operated in Ingleside, TX. Providing high-precision fabrication for 
         Structural, Marine, and Industrial projects.
       </p>
 
-      {/* Buttons stay visible by tightening gap and padding in landscape */}
       <div className="mt-6 md:mt-12 landscape:mt-4 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 font-black italic w-full md:w-auto">
         <a 
           href="tel:3612221930" 
