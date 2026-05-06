@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-industrial-dark: #121212;
+  --color-industrial-gray: #2d2d2d;
+  --color-industrial-orange: #FF8C00;
+  --color-industrial-steel: #cbd5e1;
+
+  @keyframes pulse-slow {
+    0%, 100% { transform: scale(1.05); }
+    50% { transform: scale(1.1); }
+  }
+}
+
+/* 1. Reset everything to be edge-to-edge */
+:root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-industrial-dark);
+  color-scheme: dark;
+  /* Keeps the font looking sharp */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* 2. Fix the #root container */
+#root {
+  width: 100%;       /* Changed from 1126px */
+  max-width: 100%;    /* Changed from 100% */
+  margin: 0;         /* Removed auto centering */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 3. Custom Animation Utility */
+.animate-pulse-slow {
+  animation: pulse-slow 15s ease-in-out infinite;
+}
+
+/* 4. Industrial Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+::-webkit-scrollbar-thumb {
+  background: #FF8C00;
+  border-radius: 4px;
+}
