@@ -22,7 +22,7 @@ export const Footer = () => {
           
           <div className="flex items-center justify-center md:justify-start gap-3 text-white border-b border-white/5 pb-2">
             <User className="text-industrial-orange" size={20} />
-            <span className="font-bold tracking-wide">Owner: Gabino Torres Jr.</span>
+            <span className="font-bold tracking-wide">Owner: Gabino Torres II</span>
           </div>
 
           <div className="flex items-center justify-center md:justify-start gap-3">
