@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/toro-welding/', // Add this line to match your repo name
+  base: '/', // Add this line to match your repo name
 })
