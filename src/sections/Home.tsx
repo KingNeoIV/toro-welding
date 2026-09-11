@@ -1,6 +1,7 @@
 import { Hero } from './Hero';
 import { Services } from './Services';
 import { FeaturedGallery } from './FeaturedGallery';
+import { ProjectSlideshow } from './ProjectSlideshow';
 
 export function Home() {
   return (
@@ -8,6 +9,7 @@ export function Home() {
       <Hero />
       <Services />
       <FeaturedGallery />
+      <ProjectSlideshow />
     </>
   );
 }
