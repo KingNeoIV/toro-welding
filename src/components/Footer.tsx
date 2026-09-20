@@ -56,6 +56,10 @@ export const Footer = () => {
           <img
             src={toroweldingLogo}
             alt="Toro Welding & Fabrication logo"
+            width={256}
+            height={256}
+            loading="lazy"
+            decoding="async"
             className="mx-auto mb-6 h-32 w-auto rounded md:mx-0"
           />
           <p className="leading-relaxed text-gray-400">
@@ -119,7 +123,7 @@ export const Footer = () => {
               aria-label="Toro Welding on Instagram"
               className={socialLinkClass}
             >
-              <img src={instagramLogo} alt="" className={socialIconClass} />
+              <img src={instagramLogo} alt="" width={96} height={96} loading="lazy" className={socialIconClass} />
             </a>
             <a
               href="https://www.facebook.com/profile.php?id=61560516488673"
@@ -128,7 +132,7 @@ export const Footer = () => {
               aria-label="Toro Welding on Facebook"
               className={socialLinkClass}
             >
-              <img src={facebookLogo} alt="" className={socialIconClass} />
+              <img src={facebookLogo} alt="" width={96} height={96} loading="lazy" className={socialIconClass} />
             </a>
           </div>
         </div>
@@ -157,7 +161,14 @@ export const Footer = () => {
             className="flex items-center gap-3 transition-colors hover:text-white"
           >
             Developed by NeoIV Tech Solutions
-            <img src={NeoIVLogo} alt="NeoIV Tech Solutions logo" className="h-8 w-auto" />
+            <img
+              src={NeoIVLogo}
+              alt="NeoIV Tech Solutions logo"
+              width={209}
+              height={64}
+              loading="lazy"
+              className="h-8 w-auto"
+            />
           </a>
         </div>
       </div>
