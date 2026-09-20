@@ -57,7 +57,7 @@ Most files have comments at the top and next to anything tricky. Search the code
 - Background of "Why Toro Welding": `sections/WhyToro.tsx` (work3.jpg)
 - Background of the Work section: `bg-work.jpg`, used in FeaturedGallery.tsx
 - Footer water tower photo: `ingleside-tx.jpg`, used in Footer.tsx
-- Share preview picture: replace `public/thumbnail.jpg` and keep the name and size (1200 x 630). Facebook and others remember old previews, so use the Facebook Sharing Debugger to refresh it.
+- Share preview picture: replace `public/thumbnail.jpg` and keep the name and size (1200 x 630, plain JPEG under 300 KB). Then in `index.html` raise the `?v=2` number to `?v=3` on the three image lines (og:image, og:image:secure_url, twitter:image). Facebook and Messenger remember the old picture by its address, so a new number makes them fetch the new one. After deploying, paste the site address into the Facebook Sharing Debugger (developers.facebook.com/tools/debug) and press "Scrape Again".
 
 **Add or remove slideshow photos and videos.** Drop `.jpg` or `.mp4` files into `src/assets/slideShow/` and they appear in the Archive slideshow automatically, in filename order. Delete a file to remove it. Rename files to reorder them. Do not use phone screenshots, since the phone's buttons and status bar show up in the gallery.
 
