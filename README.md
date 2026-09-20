@@ -1,6 +1,6 @@
 # Toro Welding & Fabrication website
 
-The website for Toro Welding & Fabrication (Ingleside, TX), live at https://www.toro-welding.com.
+The website for Toro Welding & Fabrication (Ingleside, TX), live at https://toro-welding.com (the official address has no "www"; GitHub Pages redirects www to it).
 
 Built with React 19, TypeScript, Vite, and Tailwind CSS 4. It is a single-page site (Hero, Services, Why Toro, Work, Archive, Instagram feed, Footer) plus two plain HTML pages (Privacy Policy and Accessibility Statement). Hosted free on GitHub Pages and deployed automatically.
 
@@ -110,6 +110,6 @@ Watch progress on the repository's Actions tab on GitHub. A green check means it
 - **Privacy policy.** It names Google Analytics, Google Fonts, the Instagram feed, and GitHub hosting. If you add or remove any third-party service (a contact form, a chat widget, ads), update `public/privacy.html`.
 - **Accessibility.** Keep the pause buttons on moving content, give every meaningful photo a text description, keep text easy to read against its background, and keep the site usable with a keyboard. Update `public/accessibility.html` if that changes.
 - **Photos and videos of people.** Get the printable release form in `business-forms/` signed before posting customers, vessel owners, or identifiable crew.
-- **Google.** `index.html` includes business details (phone, city, hours) for Google, and `sitemap.xml` lists the pages. In Google Search Console, add the site and submit `https://www.toro-welding.com/sitemap.xml`. Google's local results, including hours, mostly come from the free Google Business Profile, so claim and keep that listing up to date too.
+- **Google.** `index.html` includes business details (phone, city, hours) for Google, and `sitemap.xml` lists the pages. In Google Search Console, add the site and submit `https://toro-welding.com/sitemap.xml`. Google's local results, including hours, mostly come from the free Google Business Profile, so claim and keep that listing up to date too.
 - **Static pages in dev.** Links to pages in `public/` must end in `.html`. Without it, the local dev server shows the home page instead.
 - **Do not edit `dist/` or `node_modules/`.** They are rebuilt automatically and are not saved in git.
