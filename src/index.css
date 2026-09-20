@@ -1,25 +1,46 @@
+/* Tailwind CSS: provides the utility classes (text-white, p-4, flex, etc.) used in every component. */
 @import "tailwindcss";
 
+/* Theme: the site's font, colors, and animations. Anything defined here becomes a Tailwind class,
+   for example --color-industrial-orange gives you text-industrial-orange, bg-industrial-orange, and so on. */
 @theme {
+  --font-sans: "Titillium Web", ui-sans-serif, system-ui, sans-serif;
   --color-industrial-dark: #121212;
   --color-industrial-gray: #2d2d2d;
   --color-industrial-orange: #FF8C00;
   --color-industrial-steel: #cbd5e1;
 
+  /* Slow zoom in and out. Not used by any component right now. */
   @keyframes pulse-slow {
     0%, 100% { transform: scale(1.05); }
     50% { transform: scale(1.1); }
   }
+
+  /* Services section: text fades up when a service is picked, and the project-type strip scrolls */
+  --animate-panel-in: panel-in 0.45s ease-out both;
+  @keyframes panel-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: none; }
+  }
+
+  --animate-marquee: marquee 45s linear infinite;
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
 }
 
-/* --- ADD THIS LINE HERE --- */
-/* This ONLY triggers if the screen is wider than 1024px AND taller than 600px */
+/* Extra screen-size shortcuts usable in class names (for example "desktop:flex").
+   Neither one is used by a component right now.
+   desktop: only when the screen is wider than 1024px AND taller than 600px. */
 @custom-variant desktop (@media (min-width: 1024px) and (min-height: 600px));
 
-/* This ONLY triggers on short mobile screens (sideways phones) */
+/* mobile-short: only on short, narrow screens (a phone turned sideways). */
 @custom-variant mobile-short (@media (max-height: 500px) and (max-width: 1023px));
 
 :root {
+  /* Page basics: dark background, and a dark color scheme so browser parts
+     (scrollbars, form fields) match, plus smoother text rendering. */
   margin: 0;
   padding: 0;
   width: 100%;
@@ -36,6 +57,7 @@ body {
   width: 100%;
 }
 
+/* #root is the div React draws the site into. The flex column lets the footer sit at the bottom on short pages. */
 #root {
   width: 100%;
   margin: 0;
@@ -44,10 +66,12 @@ body {
   flex-direction: column;
 }
 
+/* Class for the pulse-slow animation above (not used right now). */
 .animate-pulse-slow {
   animation: pulse-slow 15s ease-in-out infinite;
 }
 
+/* Custom dark scrollbar with an orange handle (Chrome, Edge, and Safari). */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -57,4 +81,19 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #FF8C00;
   border-radius: 4px;
+}
+/* Keyboard focus: every link and button gets a visible orange ring unless a component styles its own.
+   Kept in the base layer so any focus-visible: class on an element still wins. */
+@layer base {
+  :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+    outline: 2px solid var(--color-industrial-orange);
+    outline-offset: 3px;
+  }
+}
+
+/* Smooth scrolling for in-page links, unless the visitor prefers reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
