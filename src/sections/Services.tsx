@@ -4,7 +4,7 @@ import { SectionHeading } from '../components/SectionHeading';
 import structuralPhoto from '../assets/work6.jpg';
 import mobilePhoto from '../assets/slideShow/eaee0505-749d-4171-8446-0499f56f9be2.jpg';
 import industrialPhoto from '../assets/slideShow/ecc34ebf-07b3-441d-8952-3cac67d9b80f.jpg';
-import customPhoto from '../assets/customBuilds.png';
+import customPhoto from '../assets/customBuilds.jpg';
 
 /*
  * DRAFT TEXT: the intro paragraph and the "Materials" and "Processes" lists below
