@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.toro-welding.com/sitemap.xml
+Sitemap: https://toro-welding.com/sitemap.xml
