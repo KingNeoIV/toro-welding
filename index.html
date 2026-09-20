@@ -27,6 +27,12 @@
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+
+      <!-- The big picture at the top of the page (the hero poster). React draws it, so without this line
+           the browser only finds out about it after the site's code has run. This line makes it start
+           downloading right away, which is what Google's speed test calls "Largest Contentful Paint".
+           Vite swaps in the real file name when the site is built, so leave the path as it is. -->
+      <link rel="preload" as="image" href="/src/assets/hero-poster.jpg" fetchpriority="high" />
       
       <!-- Page title (browser tab) and description (shown in Google search results) -->
       <title>Toro Welding &amp; Fabrication | Industrial Precision</title>
@@ -113,8 +119,8 @@
       <div id="root"></div>
       <!-- Starts the site (src/main.tsx) -->
       <script type="module" src="/src/main.tsx"></script>
-      <!-- Instagram's embed script: turns the placeholder in SocialSection.tsx into the live feed.
-           Disclosed in the privacy policy. -->
-      <script async src="https://www.instagram.com/embed.js"></script>
+      <!-- Instagram's embed script is NOT listed here on purpose. src/components/SocialSection.tsx
+           adds it only after a visitor presses "Load latest posts", so Instagram sets no cookies
+           until the visitor asks for the feed. Disclosed in the privacy policy. -->
     </body>
   </html>
