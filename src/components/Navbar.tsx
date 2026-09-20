@@ -99,7 +99,13 @@ export const Navbar = () => {
           aria-label="Toro Welding, back to top"
           className="absolute left-1/2 flex -translate-x-1/2 items-center gap-3 md:static md:translate-x-0"
         >
-          <img src={toroweldingLogo} alt="Toro Welding logo" className="h-14 w-auto rounded" />
+          <img
+            src={toroweldingLogo}
+            alt="Toro Welding logo"
+            width={256}
+            height={256}
+            className="h-14 w-auto rounded"
+          />
           <span className="hidden text-xl font-bold uppercase tracking-wide lg:block">
             Toro Welding
           </span>
